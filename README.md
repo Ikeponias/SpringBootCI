@@ -1,0 +1,2 @@
+# SpringBootCI
+Spring BootでCIする
