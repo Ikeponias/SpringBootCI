@@ -32,12 +32,13 @@ class TestControllerTest {
                 .andReturn();
         Assertions.assertEquals(mvcResult.getResponse().getContentAsString(), "Hello World!");
     }
-// 失敗用テスト
-//    @Test
-//    public void failedTest() throws Exception {
-//        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/test"))
-//                .andExpect(MockMvcResultMatchers.status().isOk())
-//                .andReturn();
-//        Assertions.assertEquals(mvcResult.getResponse().getContentAsString(), "Hello World");
-//    }
+
+    // 失敗用テスト
+    @Test
+    public void failedTest() throws Exception {
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/test"))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn();
+        Assertions.assertEquals(mvcResult.getResponse().getContentAsString(), "Hello World");
+    }
 }
